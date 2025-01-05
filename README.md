@@ -298,7 +298,9 @@ To cite this repository in publications:
 
 ## Writing in the end
 
-The name "Sparrow" actually comes from an old saying *“麻雀虽小，五脏俱全.”* Hope you enjoy using Sparrow! 
+The name "Sparrow" actually comes from an old saying *“麻雀虽小，五脏俱全.”* 
+
+Hope you enjoy using Sparrow! 
 
 Additionally, we have made detailed comments on the source code (`Sparrow_V2.py`) so that you can modify Sparrow to fit your own problem. But only for non-commercial purposes, and all rights are reserved by [Jinghao Xin](https://github.com/XinJingHao).
 
