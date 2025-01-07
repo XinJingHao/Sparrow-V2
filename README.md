@@ -177,7 +177,11 @@ grouped_lidar_output = [100, 40, 90, 100, 100, 100]
 ### RL representation:
 As illustrated below (left), the basic task in Sparrow is about navigating the robot to the green target area as soon as possible, without colliding with obstacles (RED:Dynamic obstacles, BLACK:Static obstacles). The position of the robot and target point will be reseted when _reaching target_ / _collide_ / _exceed maximum episodic steps_. The obstacles will be regenerated when calling the ```reset()``` function.
 
-<img src="https://github.com/XinJingHao/Images/blob/main/Sparrow_V2/example.png" width="25%" height="auto"><img src="https://github.com/XinJingHao/SparrowDynamic-Unreleased/blob/main/Sparrow-V2.1-Unreleased/Images/State.png" width="70%" height="auto">
+
+<p align="center">
+  <img src="https://github.com/XinJingHao/Images/blob/main/Sparrow_V2/example.png" width="250" />
+  <img src="https://github.com/XinJingHao/Images/blob/main/Sparrow_V2/D2T_alpha.png" width="500" />
+</p>
 
 
 #### State:
@@ -214,7 +218,7 @@ If you wish to use continuous action to control the robot, you can set ```--acti
 
 #### Reward:
 
-<img src="https://github.com/XinJingHao/SparrowDynamic-Unreleased/blob/main/Sparrow-V2.1-Unreleased/Images/Ro.png" align="right" width="23%"/>
+<img src="https://github.com/XinJingHao/Images/blob/main/Sparrow_V2/Ro.png" align="right" width="23%"/>
 
 The reward function of Sparrow-V2 is:
 - $r=200$, when arriving at the target point
@@ -243,7 +247,7 @@ The episode would be truncated only when the episode steps exceed `--max_ep_step
 The absolute location and orientation of the robot can be derived from the ```info``` yielded by the ```step()``` and ```reset()``` function. The absolute location and orientation coordinate system is illustrated bellow:
 
 <div align="center">
-<img width="35%" height="auto" src="https://github.com/XinJingHao/SparrowDynamic-Unreleased/blob/main/Sparrow-V2.1-Unreleased/Images/coordinate_frames.svg">
+<img width="35%" height="auto" src="https://github.com/XinJingHao/Images/blob/main/Sparrow_V2/coordinate_frames.svg">
 </div>
 
 ### Render:
