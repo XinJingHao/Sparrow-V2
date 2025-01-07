@@ -218,7 +218,7 @@ If you wish to use continuous action to control the robot, you can set ```--acti
 
 #### Reward:
 
-<img src="https://github.com/XinJingHao/Images/blob/main/Sparrow_V2/Ro.png" align="right" width="23%"/>
+<img src="https://github.com/XinJingHao/Images/blob/main/Sparrow_V2/Ro.png" align="right" width="30%"/>
 
 The reward function of Sparrow-V2 is:
 - $r=200$, when arriving at the target point
