@@ -223,7 +223,7 @@ If you wish to use continuous action to control the robot, you can set ```--acti
 The reward function of Sparrow-V2 is:
 - $r=200$, when arriving at the target point
 - $r=-200$, when colliding with obstacle
-- $r=-200$, when exceeding the maps
+- $r=-200$, when exceeding the maximal local planning distance ```D```
 - $r= 0.5 \cdot r_d + r_a \cdot r_o - 0.5 \cdot r_p - 0.5$, otherwise
 
 
