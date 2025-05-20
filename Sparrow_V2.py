@@ -172,7 +172,7 @@ class Sparrow():
         # 提前声明变量的数据格式，速度更快
         self.step_counter_DR = 0 # 用于记录DR的持续步数
         self.step_counter_vec = torch.zeros(self.N, dtype=torch.long, device=self.dvc) # 用于truncate
-        self.car_state = torch.zeros((self.N, 5), device=self.dvc, dtype=torch.float32)
+        self.car_state = torch.zeros((self.N, 5), device=self.dvc, dtype=torch.float32) # [[X,Y,theta,V_linear,V_angular], ...]
         self.reward_vec = torch.zeros(self.N, device=self.dvc) # vectorized reward signal
         self.dw_vec = torch.zeros(self.N, dtype=torch.bool, device=self.dvc) # vectorized terminated signal
         self.tr_vec = torch.zeros(self.N, dtype=torch.bool, device=self.dvc)  # vectorized truncated signal
