@@ -711,6 +711,34 @@ class Sparrow():
         pygame.draw.aaline(canvas, color, (end_x, end_y), arrow_end_left)
         pygame.draw.aaline(canvas, color, (end_x, end_y), arrow_end_right)
 
+    def _draw_arrow_with_start_end(self, canvas, start, end, color=(0, 0, 0), width=3, arrow_head_length=10, arrow_head_angle=30):
+        '''
+        canvas: 绘图面板(pygame.surface)
+        start: 起点 (x,y)
+        end: 终点 (x,y)
+        '''
+        # 绘制主线
+        pygame.draw.line(canvas, color, start, end, width)
+
+        # 计算箭头方向向量
+        dx = end[0] - start[0]
+        dy = end[1] - start[1]
+        angle = np.atan2(dy, dx)
+
+        # 箭头角度转弧度
+        angle1 = angle + np.radians(arrow_head_angle)
+        angle2 = angle - np.radians(arrow_head_angle)
+
+        # 计算箭头边点坐标
+        x1 = end[0] - arrow_head_length * np.cos(angle1)
+        y1 = end[1] - arrow_head_length * np.sin(angle1)
+        x2 = end[0] - arrow_head_length * np.cos(angle2)
+        y2 = end[1] - arrow_head_length * np.sin(angle2)
+
+        # 绘制箭头头部的两个边
+        pygame.draw.line(canvas, color, end, (x1, y1), width)
+        pygame.draw.line(canvas, color, end, (x2, y2), width)
+    
     def _render_frame(self):
         if self.window is None and self.render_mode == "human":
             pygame.init()
